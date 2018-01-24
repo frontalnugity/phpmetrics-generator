@@ -15,7 +15,10 @@
     ],
     "scripts": {
         "post-package-install": [
-            "ln -ls ./vendor/frontalnugity/phpmetrics-generator/generate_metrics.sh generate_metrics.sh"
+            "ln -s vendor/frontalnugity/phpmetrics-generator/generate_metrics.sh generate_metrics.sh"
+        ],
+        "post-package-update": [
+            "ln -s vendor/frontalnugity/phpmetrics-generator/generate_metrics.sh generate_metrics.sh"
         ]
     }
 }
