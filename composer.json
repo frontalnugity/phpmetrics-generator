@@ -2,6 +2,7 @@
     "name": "frontalnugity/phpmetrics-generator",
     "description": "A shell script to make it easy to generate static code reports using phpmetrics by Jean-François Lépine (see http://phpmetrics.org)",
     "type": "library",
+    "minimum-stability":"dev",
     "require": {
         "phpmetrics/phpmetrics": "^2.3"
     },
@@ -11,5 +12,10 @@
             "name": "frontalNugity",
             "email": "nuge@geniusfactor.ca"
         }
-    ]
+    ],
+    "scripts": {
+        "post-package-install": [
+            "ln -ls ./vendor/frontalnugity/phpmetrics-generator/generate_metrics.sh generate_metrics.sh"
+        ]
+    }
 }
